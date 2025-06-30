@@ -7,17 +7,17 @@ const ImageSlider = () => {
 
   const slides = [
     {
-      image: './src/assets/images/slider-1.jpg',
+      image: '@/src/assets/images/slider-1.jpg',
       title: 'Premium Tobacco Cultivation',
       description: 'Cultivating the finest tobacco leaves with traditional methods and modern techniques'
     },
     {
-      image: './src/assets/images/slider-2.jpg',
+      image: '@/src/assets/images/slider-2.jpg',
       title: 'Modern Cigarette Production',
       description: 'State-of-the-art manufacturing facilities ensuring quality and consistency'
     },
     {
-      image: './src/assets/images/slider-3.webp',
+      image: '@/src/assets/images/slider-3.webp',
       title: 'Quality Distribution Network',
       description: 'Ensuring premium cigarettes reach customers through our extensive distribution network'
     },

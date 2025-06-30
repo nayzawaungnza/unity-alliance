@@ -1,5 +1,5 @@
 import { Users, Target, Eye, Award, Briefcase, GraduationCap, MapPin } from 'lucide-react';
-
+import shapeleaf from '../assets/images/shape-leaf.png';
 const About = () => {
   const teamMembers = [
     {
@@ -71,7 +71,7 @@ const About = () => {
             </div>
             <div>
               <img
-                src="./src/assets/images/shape-leaf.png"
+                src={shapeleaf}
                 alt="Tobacco processing facility"
                 className="rounded-lg shadow-lg w-full h-100 object-cover"
               />

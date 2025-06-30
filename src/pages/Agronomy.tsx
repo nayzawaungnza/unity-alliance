@@ -1,5 +1,5 @@
 import { Sprout, Sun, Droplets, Microscope, BarChart3, Shield } from 'lucide-react';
-
+import ImageTobacco from '../assets/images/Image-Tobacco.jpg';
 const Agronomy = () => {
   const practices = [
     {
@@ -83,7 +83,7 @@ const Agronomy = () => {
         <section className="mb-16">
           <div className="relative h-96 rounded-lg overflow-hidden">
             <img
-              src="./src/assets/images/Image-Tobacco.jpg"
+              src={ImageTobacco}
               alt="Tobacco farming"
               className="w-full h-full object-cover"
             />
@@ -203,7 +203,7 @@ const Agronomy = () => {
             
             <div>
               <img
-                src="./src/assets/images/Image-Tobacco.jpg"
+                src={ImageTobacco}
                 alt="Sustainable farming"
                 className="rounded-lg shadow-lg w-full h-96 object-cover"
               />

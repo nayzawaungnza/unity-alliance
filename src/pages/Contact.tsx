@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css'; // Import Leaflet CSS
+import L, { LatLngExpression } from 'leaflet';
+import 'leaflet/dist/leaflet.css';
 
 // Fix for default marker icon in Leaflet
 delete (L.Icon.Default.prototype as any)._getIconUrl;
@@ -18,7 +18,7 @@ const Contact = () => {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -32,7 +32,7 @@ const Contact = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -52,7 +52,6 @@ const Contact = () => {
       };
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
-      
       setSubmitStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
@@ -62,6 +61,8 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
+
+  const mapCenter: LatLngExpression = [16.8345, 96.1286]; // Explicitly type as LatLngExpression
 
   return (
     <div className="py-16">
@@ -79,7 +80,6 @@ const Contact = () => {
           {/* Contact Information */}
           <div>
             <h2 className="text-2xl font-bold text-tobacco-800 mb-8">Get In Touch</h2>
-            
             <div className="space-y-6">
               <div className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
                 <div className="flex-shrink-0">
@@ -139,18 +139,19 @@ const Contact = () => {
             {/* Interactive Map */}
             <div className="mt-8">
               <MapContainer
-                center={[16.8345, 96.1286]} // Approximate coordinates for Hlaing Township
+                center={mapCenter}
                 zoom={20}
-                style={{ height: '256px', width: '100%', borderRadius: '8px'  }}
+                style={{ height: '256px', width: '100%', borderRadius: '8px' }}
                 className="shadow-inner border border-gray-500"
               >
                 <TileLayer
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                   attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 />
-                <Marker position={[16.8345, 96.1286]}>
+                <Marker position={mapCenter}>
                   <Popup>
-                    <h4 className='font-bold text-tobacco-600'>Unity Alliance Co., Ltd.</h4><br />
+                    <h4 className="font-bold text-tobacco-600">Unity Alliance Co., Ltd.</h4>
+                    <br />
                     No.68/A, Kan Road, Hlaing Township, Yangon, Myanmar
                   </Popup>
                 </Marker>
@@ -162,7 +163,7 @@ const Contact = () => {
           <div>
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
               <h2 className="text-2xl font-bold text-tobacco-800 mb-6">Send us a Message</h2>
-              
+
               {/* Status Messages */}
               {submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center space-x-3">
@@ -183,7 +184,7 @@ const Contact = () => {
                   </div>
                 </div>
               )}
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -274,7 +275,7 @@ const Contact = () => {
 
               {/* EmailJS Setup Instructions */}
               {!isEmailConfigured && (
-                <div className="mt-6 p-4 bg-tobacco-50 rounded-lg border border-tobacco/Model_3.5/200">
+                <div className="mt-6 p-4 bg-tobacco-50 rounded-lg border border-tobacco-200">
                   <h4 className="text-sm font-semibold text-tobacco-800 mb-2">Email Configuration Required</h4>
                   <p className="text-xs text-tobacco-600">
                     To enable email functionality, please configure EmailJS with your service credentials in the Contact.tsx file.

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Sprout, Sun, Droplets, Microscope, BarChart3, Shield } from 'lucide-react';
 
 const Agronomy = () => {

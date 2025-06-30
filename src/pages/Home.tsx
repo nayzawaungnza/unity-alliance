@@ -1,4 +1,3 @@
-import React from 'react';
 import { Leaf, Users, Award, Globe, TrendingUp, Factory, Shield, Target } from 'lucide-react';
 import ImageSlider from '../components/ImageSlider';
 

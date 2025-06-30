@@ -1,5 +1,4 @@
-import React from 'react';
-import { Users, Target, Eye, Award, Briefcase, GraduationCap, MapPin, Calendar } from 'lucide-react';
+import { Users, Target, Eye, Award, Briefcase, GraduationCap, MapPin } from 'lucide-react';
 
 const About = () => {
   const teamMembers = [

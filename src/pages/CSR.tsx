@@ -1,4 +1,3 @@
-import React from 'react';
 import { Heart, Users, Leaf, GraduationCap, Home, Droplets } from 'lucide-react';
 
 const CSR = () => {

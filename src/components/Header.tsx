@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import {   ChevronDown } from 'lucide-react';
 import '../assets/css/Header.css';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Award, Star, Globe, Shield } from 'lucide-react';
 
 const Brand = () => {

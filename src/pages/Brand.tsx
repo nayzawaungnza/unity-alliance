@@ -1,19 +1,17 @@
 import { Award, Star, Globe, Shield } from 'lucide-react';
-import lordoriginal from '../assets/images/LordOriginal.jpg';
-import lordblue from '@/assets/images/LordBlue.jpg';
 const Brand = () => {
   const brands = [
     {
       name: 'Lord Original',
       description: 'Our flagship premium cigarette brand, crafted from the finest tobacco leaves.',
       features: ['Premium Virginia tobacco', 'Gold-tipped filter', 'Smooth taste', 'Elegant packaging'],
-      image: lordoriginal
+      image: 'https://supersevenstars.com/wp-content/uploads/2025/07/LordOriginal.jpg'
     },
     {
       name: 'Lord Blue',
       description: 'A traditional blend that combines heritage with modern quality standards.',
       features: ['Traditional blend', 'Consistent quality', 'Affordable pricing', 'Wide availability'],
-      image: lordblue
+      image: 'https://supersevenstars.com/wp-content/uploads/2025/07/LordBlue.jpg'
     },
     // {
     //   name: 'Unity Special',

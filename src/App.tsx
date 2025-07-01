@@ -7,7 +7,8 @@ import Contact from './pages/Contact';
 import Brand from './pages/Brand';
 import CSR from './pages/CSR';
 import Agronomy from './pages/Agronomy';
-
+import CookieConsent from './components/CookieConsent';
+import CookiePolicy from './pages/CookiePolicy';
 function App() {
   return (
     <Router>
@@ -21,9 +22,11 @@ function App() {
             <Route path="/brand" element={<Brand />} />
             <Route path="/csr" element={<CSR />} />
             <Route path="/agronomy" element={<Agronomy />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
           </Routes>
         </main>
         <Footer />
+        <CookieConsent />
       </div>
     </Router>
   );

@@ -8,8 +8,8 @@ import 'leaflet/dist/leaflet.css';
 // Fix for default marker icon in Leaflet
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 L.Icon.Default.mergeOptions({
-  iconRetinaUrl: './src/assets/images/gps.png',
-  iconUrl: './src/assets/images/gps.png',
+  iconRetinaUrl: 'https://supersevenstars.com/wp-content/uploads/2025/07/gps.png',
+  iconUrl: 'https://supersevenstars.com/wp-content/uploads/2025/07/gps.png',
   shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
 });
 

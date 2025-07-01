@@ -1,26 +1,23 @@
 import  { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import slider1 from '@/assets/images/slider-1.jpg';
 
-import slider2 from '@/assets/images/slider-2.jpg';
-import slider3 from '@/assets/images/slider-3.webp';
 const ImageSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const slides = [
     {
-      image: slider1,
+      image: 'https://supersevenstars.com/wp-content/uploads/2025/07/slider-1.jpg',
       title: 'Premium Tobacco Cultivation',
       description: 'Cultivating the finest tobacco leaves with traditional methods and modern techniques'
     },
     {
-      image: slider2,
+      image: 'https://supersevenstars.com/wp-content/uploads/2025/07/slider-2.jpg',
       title: 'Modern Cigarette Production',
       description: 'State-of-the-art manufacturing facilities ensuring quality and consistency'
     },
     {
-      image: slider3,
+      image: 'https://supersevenstars.com/wp-content/uploads/2025/07/slider-3.webp',
       title: 'Quality Distribution Network',
       description: 'Ensuring premium cigarettes reach customers through our extensive distribution network'
     },

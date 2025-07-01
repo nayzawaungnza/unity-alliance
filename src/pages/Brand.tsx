@@ -6,13 +6,13 @@ const Brand = () => {
       name: 'Lord Original',
       description: 'Our flagship premium cigarette brand, crafted from the finest tobacco leaves.',
       features: ['Premium Virginia tobacco', 'Gold-tipped filter', 'Smooth taste', 'Elegant packaging'],
-      image: './src/assets/images/LordOriginal.jpg'
+      image: 'https://supersevenstars.com/wp-content/uploads/2025/07/LordOriginal.jpg'
     },
     {
       name: 'Lord Blue',
       description: 'A traditional blend that combines heritage with modern quality standards.',
       features: ['Traditional blend', 'Consistent quality', 'Affordable pricing', 'Wide availability'],
-      image: './src/assets/images/LordBlue.jpg'
+      image: 'https://supersevenstars.com/wp-content/uploads/2025/07/LordBlue.jpg'
     },
     // {
     //   name: 'Unity Special',

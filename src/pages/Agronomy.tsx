@@ -83,7 +83,7 @@ const Agronomy = () => {
         <section className="mb-16">
           <div className="relative h-96 rounded-lg overflow-hidden">
             <img
-              src="./src/assets/images/Image-Tobacco.jpg"
+              src="https://supersevenstars.com/wp-content/uploads/2025/07/Image-Tobacco.jpg"
               alt="Tobacco farming"
               className="w-full h-full object-cover"
             />
@@ -203,7 +203,7 @@ const Agronomy = () => {
             
             <div>
               <img
-                src="./src/assets/images/Image-Tobacco.jpg"
+                src="https://supersevenstars.com/wp-content/uploads/2025/07/Image-Tobacco.jpg"
                 alt="Sustainable farming"
                 className="rounded-lg shadow-lg w-full h-96 object-cover"
               />

@@ -71,7 +71,7 @@ const About = () => {
             </div>
             <div>
               <img
-                src="./src/assets/images/shape-leaf.png"
+                src="https://supersevenstars.com/wp-content/uploads/2025/07/shape-leaf.png"
                 alt="Tobacco processing facility"
                 className="rounded-lg shadow-lg w-full h-100 object-cover"
               />

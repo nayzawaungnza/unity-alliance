@@ -1,4 +1,3 @@
-import React from 'react';
 import { Shield, Cookie, Eye, Lock, Settings, Calendar } from 'lucide-react';
 
 const CookiePolicy = () => {
